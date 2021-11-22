@@ -1,5 +1,5 @@
 resource "tfe_workspace" "vpc" {
-  name         = "VPC-Workspace"
+  name         = var.vpc_workspace_name
   organization = var.tfe_organization_name
   vcs_repo {
     identifier     = "${var.github_user}/AWS-and-Terraform"
