@@ -13,7 +13,7 @@ resource "tfe_workspace" "vpc" {
 
 resource "tfe_variable" "availability_zones" {
   key          = "availability_zones"
-  value        = var.aws_access_key
+  value        = var.availability_zones
   description  = "Availability zones to account for"
   workspace_id = tfe_workspace.vpc.id
   category     = "terraform"
@@ -21,7 +21,7 @@ resource "tfe_variable" "availability_zones" {
 
 resource "tfe_variable" "cidr_size" {
   key          = "cidr_size"
-  value        = var.aws_access_key
+  value        = var.cidr_size
   description  = "CIDR Size"
   workspace_id = tfe_workspace.vpc.id
   category     = "terraform"
