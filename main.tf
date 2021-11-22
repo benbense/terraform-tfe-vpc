@@ -11,8 +11,8 @@ resource "tfe_workspace" "vpc" {
   working_directory   = "/Homework4/VPC"
 }
 
-resource "tfe_variable" "availability_zones " {
-  key          = "availability_zones "
+resource "tfe_variable" "availability_zones" {
+  key          = "availability_zones"
   value        = var.aws_access_key
   description  = "Availability zones to account for"
   workspace_id = tfe_workspace.vpc.id
