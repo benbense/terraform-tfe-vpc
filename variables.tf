@@ -25,6 +25,10 @@ variable "vpc_name" {
   description = "VPC Name"
   type        = string
 }
+variable "cidr_size" {
+  description = "CIDR Size"
+  type        = string
+}
 
 variable "aws_acess_key" {
   description = "AWS Acess Key"
@@ -35,7 +39,7 @@ variable "aws_secret_acess_key" {
   description = "AWS Secret Acess Key"
   type        = string
 }
-variable "default_region" {
+variable "aws_default_region" {
   description = "AWS Default Region"
   type        = string
 }

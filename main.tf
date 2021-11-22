@@ -53,7 +53,7 @@ resource "tfe_variable" "aws_secret_acess_key" {
   sensitive    = true
 }
 
-resource "tfe_variable" "default_region" {
+resource "tfe_variable" "aws_default_region" {
   key          = "AWS_DEFAULT_REGION"
   value        = var.aws_default_region
   description  = "AWS Default Region"
