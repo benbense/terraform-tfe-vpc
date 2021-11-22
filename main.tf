@@ -35,5 +35,29 @@ resource "tfe_variable" "vpc_name" {
   category     = "terraform"
 }
 
+resource "tfe_variable" "aws_acess_key" {
+  key          = "AWS_ACCESS_KEY_ID"
+  value        = var.aws_acess_key
+  description  = "AWS Acess Key"
+  workspace_id = tfe_workspace.vpc.id
+  category     = "env"
+  sensitive    = true
+}
 
+resource "tfe_variable" "aws_secret_acess_key" {
+  key          = "AWS_SECRET_ACCESS_KEY"
+  value        = var.aws_secret_acess_key
+  description  = "AWS Secret Acess Key"
+  workspace_id = tfe_workspace.vpc.id
+  category     = "env"
+  sensitive    = true
+}
+
+resource "tfe_variable" "default_region" {
+  key          = "AWS_DEFAULT_REGION"
+  value        = var.aws_default_region
+  description  = "AWS Default Region"
+  workspace_id = tfe_workspace.vpc.id
+  category     = "env"
+}
 

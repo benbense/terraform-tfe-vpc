@@ -25,3 +25,17 @@ variable "vpc_name" {
   description = "VPC Name"
   type        = string
 }
+
+variable "aws_acess_key" {
+  description = "AWS Acess Key"
+  type        = string
+}
+
+variable "aws_secret_acess_key" {
+  description = "AWS Secret Acess Key"
+  type        = string
+}
+variable "default_region" {
+  description = "AWS Default Region"
+  type        = string
+}
