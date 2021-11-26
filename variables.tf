@@ -48,3 +48,23 @@ variable "vpc_workspace_name" {
   description = "VPC Workspace name"
   type        = string
 }
+
+variable "tfe_organization_name" {
+  description = "Terrafrom Cloud Organization Name"
+  type        = string
+}
+
+variable "workspace_repo_identifier" {
+  description = "Github repo identifier for Workspace creation"
+  type        = string
+}
+
+variable "vpc_workspace_directory" {
+  description = "Working directory for vpc module"
+  type        = string
+}
+
+variable "slack_webhook_url" {
+  description = "Slack Webhook URL for Notifications"
+  type        = string
+}
