@@ -11,22 +11,6 @@ resource "tfe_workspace" "vpc" {
   working_directory   = var.vpc_workspace_directory
 }
 
-resource "tfe_notification_configuration" "slack_notifications" {
-  workspace_id     = tfe_workspace.vpc.id
-  name             = tfe_workspace.vpc.name
-  enabled          = true
-  destination_type = "slack"
-  triggers = [
-    "run:created",
-    "run:planning",
-    "run:needs_attention",
-    "run:applying",
-    "run:completed",
-    "run:errored"
-  ]
-  url = var.slack_webhook_url
-}
-
 resource "tfe_variable" "availability_zones" {
   key          = "availability_zones"
   value        = var.availability_zones

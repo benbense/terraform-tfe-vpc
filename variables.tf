@@ -58,8 +58,3 @@ variable "vpc_workspace_directory" {
   description = "Working directory for vpc module"
   type        = string
 }
-
-variable "slack_webhook_url" {
-  description = "Slack Webhook URL for Notifications"
-  type        = string
-}
