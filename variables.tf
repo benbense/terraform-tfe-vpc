@@ -58,3 +58,7 @@ variable "vpc_workspace_directory" {
   description = "Working directory for vpc module"
   type        = string
 }
+
+variable "auto_apply" {
+  description = "Whether to automatically apply changes when a Terraform plan is successful"
+}

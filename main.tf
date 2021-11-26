@@ -9,6 +9,7 @@ resource "tfe_workspace" "vpc" {
   global_remote_state = true
   execution_mode      = "remote"
   working_directory   = var.vpc_workspace_directory
+  auto_apply          = var.auto_apply
 }
 
 resource "tfe_variable" "availability_zones" {
